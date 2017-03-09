@@ -4,12 +4,10 @@ routes:
   '/workflows':
     ui: workflows
     title: LucyBot Workflows
-    openapi: kitchenSink
     meta:
       description: "Learn how to build interactive API documentation with LucyBot"
   '/docs':
     title: LucyBot Documentation
-    openapi: kitchenSink
     navigation: navigation
 
 navigation:
