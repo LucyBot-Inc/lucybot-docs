@@ -1,14 +1,13 @@
 hljsTheme: 'atom-one-light'
 routes:
-  default: '/docs'
+  '/':
+    title: LucyBot Documentation
+    navigation: navigation
   '/workflows':
     ui: workflows
     title: LucyBot Workflows
     meta:
       description: "Learn how to build interactive API documentation with LucyBot"
-  '/docs':
-    title: LucyBot Documentation
-    navigation: navigation
 
 navigation:
   - title: Introduction
