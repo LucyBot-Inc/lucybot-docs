@@ -3,7 +3,7 @@
 Once you have a directory with `LucyBot.yml`, you can use the `lucybot` tool
 to build a portable set of HTML, CSS, and JavaScript assets:
 
-```
+```bash
 cd /path/to/my/LucyBot/docs/
 lucybot build
 ```
@@ -33,7 +33,7 @@ language: node_js
 node_js:
       - "6"
 before_install:
-  - "npm install -g https://$LUCYBOT_ACCESS_TOKEN@github.com/bobby-brennan/lucy-v3"
+  - "npm install -g https://$LUCYBOT_ACCESS_TOKEN@github.com/LucyBot-Inc/documentation-generator"
 script:
   - ./scripts/build-and-commit.sh
 ```

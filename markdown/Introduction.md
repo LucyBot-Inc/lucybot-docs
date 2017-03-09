@@ -2,10 +2,9 @@ Learn how to use [LucyBot's](http://lucybot.com) API documentation tools.
 
 ## Getting Started
 You can try the free version of LucyBot [on GitHub](https://github.com/lucybot/lucy-console).
-Simply replace openapi.json with your [OpenAPI](https://www.openapis.org/) specification.
 
-The rest of this documentation applies only to the full version - you can purchase
-access at [lucybot.com](http://lucybot.com).
+The rest of this documentation applies only to the full version - visit
+[lucybot.com](http://lucybot.com) for access.
 
 ### Installation
 > You'll need the latest versions of
