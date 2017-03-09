@@ -21,5 +21,11 @@ npm install -g https://$YOUR_ACCESS_KEY@github.com/lucybot/lucy-api-portal
 lucybot --version
 ```
 
+### Setup
+Create a new directory to hold your LucyBot configuration and any API specifications,
+Markdown files, HTML assets, etc:
 
-
+```
+mkdir acme_docs
+touch acme_docs/LucyBot.yml
+```
