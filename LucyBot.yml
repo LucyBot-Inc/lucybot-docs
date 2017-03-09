@@ -5,6 +5,7 @@ routes:
     meta:
       title: LucyBot Documentation
 
+favicon: assets/favicon.ico
 sitemap:
   hostname: http://docs.lucybot.com
 
@@ -28,9 +29,7 @@ navigation:
     children:
       - markdownFile: ./markdown/Bootstrap.md
       - markdownFile: ./markdown/Templates.md
-      - title: Extras
-        markdownFile: ./markdown/CustomizationExtras.md
-        markdown: |
+      - markdownFile: ./markdown/CustomizationExtras.md
   - markdownFile: ./markdown/SwaggerExtensions.md
   - markdownFile: ./markdown/Including_Assets.md
   - markdownFile: ./markdown/SEO.md
