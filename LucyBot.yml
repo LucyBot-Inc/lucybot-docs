@@ -1,0 +1,24 @@
+hljsTheme: 'atom-one-light'
+routes:
+  default: '/docs'
+  '/workflows':
+    ui: workflows
+    title: LucyBot Workflows
+    openapi: kitchenSink
+    meta:
+      description: "Learn how to build interactive API documentation with LucyBot"
+  '/docs':
+    title: LucyBot Documentation
+    openapi: kitchenSink
+    navigation: navigation
+
+navigation:
+  - title: Introduction
+    markdownFile: ./markdown/Introduction.md
+  - title: LucyBot.yml
+    markdownFile: ./markdown/CreateLucyBotYml.md
+    expand: true
+    children:
+      - markdownFile: ./markdown/Specifications.md
+      - markdownFile: ./markdown/Routing.md
+      - markdownFile: ./markdown/Navigation.md
