@@ -6,10 +6,12 @@
 <url> <loc>http://docs.lucybot.com/LucyBot_yml/API_Specifications</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
 <url> <loc>http://docs.lucybot.com/LucyBot_yml/Routing_and_UIs</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
 <url> <loc>http://docs.lucybot.com/LucyBot_yml/Navigation</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
+<url> <loc>http://docs.lucybot.com/Building_the_Website</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
 <url> <loc>http://docs.lucybot.com/Branding_and_Customization</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
 <url> <loc>http://docs.lucybot.com/Branding_and_Customization/Create_a_Custom_Bootstrap_Theme</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
 <url> <loc>http://docs.lucybot.com/Branding_and_Customization/Navbar_and_Footer</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
 <url> <loc>http://docs.lucybot.com/Branding_and_Customization/Extras</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
+<url> <loc>http://docs.lucybot.com/OpenAPI_Extensions_for_LucyBot</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
 <url> <loc>http://docs.lucybot.com/Including_Assets</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
 <url> <loc>http://docs.lucybot.com/Search_Engine_Optimization</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
 <url> <loc>http://docs.lucybot.com/Event_Tracking</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
