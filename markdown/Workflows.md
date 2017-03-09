@@ -4,20 +4,20 @@ Workflows are step-by-step tutorials for using your API. They are
 driven by Markdown documents in the `workflows/` directory.
 
 To create your first workflow, create the file `workflows/sample_workflow/readme.md`:
-```markdown
+````markdown
 # Widgets
 
 ## Create a widget
 Use the `POST /widgets` endpoint to create a new widget.
 
 ### API Call
-\`\`\`json
+```json
 {
   "method": "post",
   "path": "/widgets",
 }
-\`\`\`
 ```
+````
 
 This will create a one-step workflow that shows the user how to create a new widget.
 The step will show an API console that calls `POST /widgets`, and will show the
@@ -33,9 +33,9 @@ In any step, you can include an API console that the user will have to use to co
 Create an "API Call" section (with a `###` heading), and specify the `method` and `path`
 you want to use. If you want the user to focus on certain parameters, you can specify which ones appear:
 
-```markdown
+````markdown
 ### API Call
-\`\`\`json
+```json
 {
   "method": "post",
   "path": "/widgets",
@@ -50,19 +50,20 @@ you want to use. If you want the user to focus on certain parameters, you can sp
     "hidden": true
   }]
 }
-\`\`\`
 ```
+````
 
 ### Sample Code
 You can include sample code for multiple programming languages for any step:
 
-```markdown
+````markdown
 ### Sample Code (JavaScript)
-\`\`\`javascript
+``` javascript
 console.log('hello world');
-\`\`\`
+```
 
 ### Sample Code (Java)
-\`\`\`java
+```java
 System.out.println("Hello world");
-\`\`\`
+```
+````

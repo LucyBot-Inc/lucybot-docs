@@ -1,20 +1,7 @@
 ## Navigation
 By default, LucyBot will use your API specification to build the left-hand navigation
 in the `console` and `documentation` UIs. You can add new sections, or customize the grouping and order
-of items in the menu. The example below will generate a menu with the following structure:
-
-* Introduction
-* Getting Started
-  * Getting an API Key
-* Operations
-  * getWidget
-  * addWidget
-  * Users
-    * getUser
-    * editUser
-* Object Schemas
-  * User
-  * Widget
+of items in the menu.
 
 ```yaml
 routes:
@@ -47,6 +34,23 @@ routes:
         children:
           - definition: User   // References 'definitions' field in the OpenAPI spec.
           - definition: Widget
+```
+
+The example above will generate a menu with the following structure:
+
+```markdown
+* Introduction
+* Getting Started
+  * Getting an API Key
+* Operations
+  * getWidget
+  * addWidget
+  * Users
+    * getUser
+    * editUser
+* Object Schemas
+  * User
+  * Widget
 ```
 
 The `navigation` field can be set for any route. If you want to reuse
@@ -91,4 +95,40 @@ You can control the content shown when the navigation item is clicked by specify
 * definition - The name of an OpenAPI JSON Schema definition
 * tag - The name of an OpenAPI tag. Every matching operation will be added as a child.
 
+### Creating Links
+You may want to include links to other pages in your Markdown. The URL for each page
+can be found by replacing any special characters (matching `/\W+/`) with underscores.
+For example, "ACME foo & bar" would become "ACME_foo_bar".
 
+To create a link relative to your server root, prefix the link with `/`. Otherwise
+links will be treated as relative to the current route.
+
+For example:
+```yaml
+routes:
+  /:
+    ui: markdown
+    markdown: |
+      * View the [docs](/docs)
+      * Learn [how to authenticate](/docs/Authentication)
+  /docs:
+    ui: documentation
+    navigation:
+      - title: Introduction
+        markdown: |
+          * Get an [API key](API_Key)
+
+      - title: Authentication
+        markdown: |
+          You have two options:
+          1. [Get an API key](Authentication/API_key)
+          2. [Use basic auth](Authentication/Basic)
+        children:
+          - title: API Key
+            markdown: |
+              Visit [our site](http://acme.com) to get a key.
+              Or learn how to use [basic auth](Authentication/Basic)
+          - title: Basic
+            markdown: |
+              Use the `Authentication` header.
+```
