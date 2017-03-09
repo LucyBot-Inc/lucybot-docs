@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>http://docs.lucybot.com/</loc> <changefreq>daily</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://docs.lucybot.com/Introduction</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
+<url> <loc>http://docs.lucybot.com/LucyBot_yml</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
+<url> <loc>http://docs.lucybot.com/LucyBot_yml/API_Specifications</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
+<url> <loc>http://docs.lucybot.com/LucyBot_yml/Routing_and_UIs</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
+<url> <loc>http://docs.lucybot.com/LucyBot_yml/Navigation</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
+<url> <loc>http://docs.lucybot.com/Branding_and_Customization</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
+<url> <loc>http://docs.lucybot.com/Branding_and_Customization/Create_a_Custom_Bootstrap_Theme</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
+<url> <loc>http://docs.lucybot.com/Branding_and_Customization/Navbar_and_Footer</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
+<url> <loc>http://docs.lucybot.com/Branding_and_Customization/Extras</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
+<url> <loc>http://docs.lucybot.com/Including_Assets</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
+<url> <loc>http://docs.lucybot.com/Search_Engine_Optimization</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
+<url> <loc>http://docs.lucybot.com/Event_Tracking</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
+<url> <loc>http://docs.lucybot.com/GitHub_Integration</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
+<url> <loc>http://docs.lucybot.com/Building_Workflows</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
+</urlset>
