@@ -20,3 +20,19 @@ navigation:
       - markdownFile: ./markdown/Specifications.md
       - markdownFile: ./markdown/Routing.md
       - markdownFile: ./markdown/Navigation.md
+  - title: Branding and Customization
+    markdown: |
+      LucyBot offers several options for customizing the look and
+      feel of your documentation. You can use Bootstrap themes
+      to specify your brand's preferred colors and fonts, and include
+      HTML templates to customize the navbar, footer, and loading screen.
+    children:
+      - markdownFile: ./markdown/Bootstrap.md
+      - markdownFile: ./markdown/Templates.md
+      - title: Extras
+        markdownFile: ./markdown/CustomizationExtras.md
+        markdown: |
+  - title: Search Engine Optimization
+    markdownFile: ./markdown/SEO.md
+  - title: User and Event Tracking
+    markdownFile: ./markdown/Tracking.md

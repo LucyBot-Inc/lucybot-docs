@@ -7,7 +7,6 @@ Here's a minimal LucyBot.yml:
 specifications:
   acme_api:
     - openapi: ./openapi.yml
-      label: 'v1.0'
 ```
 
 The following fields are available in LucyBot.yml:
