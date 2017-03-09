@@ -13,6 +13,7 @@ The following fields are available in LucyBot.yml:
 
 * `specifications` - A list of different API specifications to generate docs for. See [Specifications](Specifications)
 * `routes` - Controls URL structure, navigation, and SEO. See [Routing](Routing)
+* `basePath` - If the generated LucyBot site is not mounted on your server's root, you'll need to set this
 * `hljsTheme` - A theme name for highlightjs
 * `templates` - HTML files included in every page
   * `templates.navbar`

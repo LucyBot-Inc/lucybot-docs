@@ -1,5 +1,4 @@
-Learn how to use [LucyBot's](http://lucybot.com)
-API documentation tools.
+Learn how to use [LucyBot's](http://lucybot.com) API documentation tools.
 
 ## Getting Started
 You can try the free version of LucyBot [on GitHub](https://github.com/lucybot/lucy-console).
@@ -29,3 +28,7 @@ Markdown files, HTML assets, etc:
 mkdir acme_docs
 touch acme_docs/LucyBot.yml
 ```
+
+### Examples
+* [LucyBot docs](https://github.com/lucybot/lucybot-docs) - The repository that drives the documentation seen here
+* [Kaltura Developer Platform](https://github.com/kaltura/developer-platform) - For Kaltura's VPaaS documentation

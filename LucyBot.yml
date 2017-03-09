@@ -18,6 +18,7 @@ navigation:
       - markdownFile: ./markdown/Specifications.md
       - markdownFile: ./markdown/Routing.md
       - markdownFile: ./markdown/Navigation.md
+  - markdownFile: ./markdown/BuildingTheSite.md
   - title: Branding and Customization
     markdown: |
       LucyBot offers several options for customizing the look and
@@ -30,6 +31,7 @@ navigation:
       - title: Extras
         markdownFile: ./markdown/CustomizationExtras.md
         markdown: |
+  - markdownFile: ./markdown/SwaggerExtensions.md
   - markdownFile: ./markdown/Including_Assets.md
   - markdownFile: ./markdown/SEO.md
   - markdownFile: ./markdown/Tracking.md
