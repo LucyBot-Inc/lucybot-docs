@@ -1,6 +1,7 @@
-User and event tracking is a great way to understand what your users
-are looking at and what you can do to help them succeed. By default,
-LucyBot supports [Mixpanel](http://mixpanel.com), which has a sizeable
+## Event Tracking
+
+Event tracking is a great way to understand user behavior and measure success.
+LucyBot integrates directly with [Mixpanel](http://mixpanel.com), which has a sizeable
 free tier. However, you can also use Google Analytics or other event
 tracking systems.
 

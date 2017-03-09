@@ -1,3 +1,5 @@
+## Navbar and Footer
+
 You can create HTML templates to customize the navbar at the top of the screen,
 the footer at the bottom, and the loading screen shown briefly when users first
 visit the site.

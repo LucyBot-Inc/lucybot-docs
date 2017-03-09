@@ -1,3 +1,5 @@
+## Search Engine Optimization
+
 LucyBot's SEO tools allow you to control how your documentation appears in
 search results.  You can set the `<meta>` and `<title>` tags for any page in your
 docs. You can also generate a sitemap for the entire site.

@@ -32,7 +32,6 @@ navigation:
       - title: Extras
         markdownFile: ./markdown/CustomizationExtras.md
         markdown: |
-  - title: Search Engine Optimization
-    markdownFile: ./markdown/SEO.md
-  - title: User and Event Tracking
-    markdownFile: ./markdown/Tracking.md
+  - markdownFile: ./markdown/Including_Assets.md
+  - markdownFile: ./markdown/SEO.md
+  - markdownFile: ./markdown/Tracking.md
