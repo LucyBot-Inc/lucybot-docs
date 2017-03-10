@@ -36,3 +36,42 @@ span[data-method="delete"] {
   background-color: red;
 }
 ```
+
+### Fixed-position Navbar and Menu
+A common modification is to fix the navbar and side menu so they are always visible,
+even when the user scrolls down the page.
+
+To achieve this, add the class `navbar-fixed-top` to your `<nav>` in `navbar.html`
+(see [Navbar and Footer](Branding_and_Customization/Navbar_and_Footer)).
+
+You'll also need to add padding to the body
+[per the Bootstrap docs](http://getbootstrap.com/components/#navbar-fixed-top):
+
+```
+body {
+  padding-top: 70px; /* adjust based on the size of your navbar */
+}
+```
+
+To keep the side menu in fixed position, add the following CSS
+(we use `@media` queries to restrict to desktop since the side menu UI is different on mobile):
+
+```css
+@media (min-width: 768px) {
+  .side-menu {
+    position: fixed;
+    top: 70px; /* adjust based on the size of your navbar */
+    bottom: 0px;
+    left: 0px;
+    width: 33.33%;
+    box-shadow: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .side-menu {
+    width: 25%;
+  }
+}
+```
+
