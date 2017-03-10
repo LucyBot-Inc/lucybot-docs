@@ -16,7 +16,11 @@ navigation:
     children:
       - markdownFile: ./markdown/Routing.md
       - markdownFile: ./markdown/Specifications.md
-      - markdownFile: ./markdown/Navigation.md
+      - markdownFile: ./markdown/navigation/Navigation.md
+        children:
+          - markdownFile: ./markdown/navigation/Nesting.md
+          - markdownFile: ./markdown/navigation/Links.md
+          - markdownFile: ./markdown/navigation/OpenAPI.md
   - markdownFile: ./markdown/BuildingTheSite.md
     expand: true
     children:
