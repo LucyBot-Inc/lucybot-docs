@@ -1,7 +1,7 @@
 ## Navigation
 By default, LucyBot will use your API specification to build the left-hand navigation
-in the `console` and `documentation` UIs. You can add new sections, or customize the grouping and order
-of items in the menu.
+in the `console` and `documentation` UIs. You can also set this manually to
+add new sections and customize the grouping/order of items in the menu.
 
 ```yaml
 routes:

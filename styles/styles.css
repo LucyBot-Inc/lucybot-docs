@@ -4,4 +4,6 @@
 .navbar-brand img {
   height: 100%;
 }
-
+.docs-contents ul > li {
+  margin-bottom: 5px;
+}

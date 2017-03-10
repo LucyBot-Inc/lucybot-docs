@@ -13,14 +13,19 @@ navigation:
   - title: Introduction
     markdownFile: ./markdown/Introduction.md
   - title: LucyBot.yml
-    markdownFile: ./markdown/CreateLucyBotYml.md
+    markdownFile: ./markdown/LucyBotYml.md
     expand: true
     children:
-      - markdownFile: ./markdown/Specifications.md
       - markdownFile: ./markdown/Routing.md
+      - markdownFile: ./markdown/Specifications.md
       - markdownFile: ./markdown/Navigation.md
   - markdownFile: ./markdown/BuildingTheSite.md
+    expand: true
+    children:
+      - markdownFile: ./markdown/DevelopmentMode.md
+      - markdownFile: ./markdown/Travis.md
   - title: Branding and Customization
+    expand: true
     markdown: |
       LucyBot offers several options for customizing the look and
       feel of your documentation. You can use Bootstrap themes
@@ -29,10 +34,12 @@ navigation:
     children:
       - markdownFile: ./markdown/Bootstrap.md
       - markdownFile: ./markdown/Templates.md
+      - markdownFile: ./markdown/CSSClasses.md
       - markdownFile: ./markdown/CustomizationExtras.md
   - markdownFile: ./markdown/SwaggerExtensions.md
   - markdownFile: ./markdown/Including_Assets.md
   - markdownFile: ./markdown/SEO.md
   - markdownFile: ./markdown/Tracking.md
+  - markdownFile: ./markdown/DiscussionPages.md
   - markdownFile: ./markdown/GitHub.md
   - markdownFile: ./markdown/Workflows.md

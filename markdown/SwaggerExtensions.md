@@ -9,7 +9,7 @@ Be sure to set `parameter['x-group']` to the proper group name for each paramete
 
 Each group should have a name and a description.  Groups can also have subGroups.
 
-```js
+```javascript
 operation.parameters = [
   {name: 'message_body', 'x-group': 'message'},
   {name: 'recipient_email', 'x-group': 'recipient'},

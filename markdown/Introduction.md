@@ -1,6 +1,8 @@
-Learn how to use [LucyBot's](http://lucybot.com) API documentation tools.
+LucyBot's Documentation Generator uses open standards like Markdown and
+OpenAPI (or RAML/WADL/etc.) to create a fully customizable website.
+Learn more about LucyBot's tools at [lucybot.com](http://lucybot.com).
 
-## Getting Started
+### Getting Started
 You can try the starter version of LucyBot [on GitHub](https://github.com/LucyBot-Inc/documentation-starter).
 
 The rest of this documentation applies only to the full version - visit

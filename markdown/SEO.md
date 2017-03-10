@@ -59,5 +59,5 @@ sitemap:
   hostname: https://docs.acme.com
 ```
 
-Replacing `docs.acme.com` with your hostname.
+replacing `docs.acme.com` with your hostname.
 

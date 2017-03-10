@@ -40,7 +40,7 @@ you want to use. If you want the user to focus on certain parameters, you can sp
   "method": "post",
   "path": "/widgets",
   "parameters": [{
-    "name": "widgetName",
+    "name": "widgetName"
   }, {
     "name": "widgetDescription",
     "default": "A new widget"
