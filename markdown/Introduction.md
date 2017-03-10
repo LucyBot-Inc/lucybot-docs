@@ -1,7 +1,7 @@
 Learn how to use [LucyBot's](http://lucybot.com) API documentation tools.
 
 ## Getting Started
-You can try the free version of LucyBot [on GitHub](https://github.com/lucybot/lucy-console).
+You can try the starter version of LucyBot [on GitHub](https://github.com/LucyBot-Inc/documentation-starter).
 
 The rest of this documentation applies only to the full version - visit
 [lucybot.com](http://lucybot.com) for access.
@@ -15,7 +15,7 @@ Upon purchase, you'll be given an access key that allows you to install the late
 version of LucyBot:
 
 ```
-npm install -g https://$YOUR_ACCESS_KEY@github.com/lucybot/lucy-api-portal
+npm install -g https://$YOUR_ACCESS_KEY@github.com/LucyBot-Inc/documentation-generator
 lucybot --version
 ```
 
