@@ -1,4 +1,4 @@
-## Create a LucyBot.yml file
+## LucyBot.yml
 In the top-level directory of your repository, create a LucyBot.yml
 file.  This will tell LucyBot how to build your documentation.
 

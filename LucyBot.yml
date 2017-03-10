@@ -10,10 +10,8 @@ sitemap:
   hostname: http://docs.lucybot.com
 
 navigation:
-  - title: Introduction
-    markdownFile: ./markdown/Introduction.md
-  - title: LucyBot.yml
-    markdownFile: ./markdown/LucyBotYml.md
+  - markdownFile: ./markdown/Introduction.md
+  - markdownFile: ./markdown/LucyBotYml.md
     expand: true
     children:
       - markdownFile: ./markdown/Routing.md
@@ -25,12 +23,12 @@ navigation:
       - markdownFile: ./markdown/DevelopmentMode.md
       - markdownFile: ./markdown/Travis.md
   - title: Branding and Customization
-    expand: true
     markdown: |
       LucyBot offers several options for customizing the look and
       feel of your documentation. You can use Bootstrap themes
       to specify your brand's preferred colors and fonts, and include
       HTML templates to customize the navbar, footer, and loading screen.
+    expand: true
     children:
       - markdownFile: ./markdown/Bootstrap.md
       - markdownFile: ./markdown/Templates.md

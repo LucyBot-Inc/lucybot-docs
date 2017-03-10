@@ -1,3 +1,5 @@
+## Introduction
+
 LucyBot's Documentation Generator uses open standards like Markdown and
 OpenAPI (or RAML/WADL/etc.) to create a fully customizable website.
 Learn more about LucyBot's tools at [lucybot.com](http://lucybot.com).
