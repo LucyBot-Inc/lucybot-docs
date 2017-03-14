@@ -12,12 +12,29 @@ routes:
     ui: documentation
     navigation:
 
-      - title: Introduction
-        markdown: |
-          # ACME Documentation
-          Welcome to the documentation for the ACME API.
+      - markdownFile: ./Introduction.md
         children:
           - markdownFile: ./GettingStarted.md
           - markdownFile: ./GetAnAPIKey.md
           - markdownFile: ./MakeYourFirstCall.md
 ```
+
+### Auto-expand
+
+If you want nested menu items to always be shown, you can use
+the `expand` option on the parent item:
+
+```yaml
+routes:
+  /docs:
+    ui: documentation
+    navigation:
+
+      - markdownFile: ./Introduction.md
+        expand: true
+        children:
+          - markdownFile: ./GettingStarted.md
+          - markdownFile: ./GetAnAPIKey.md
+          - markdownFile: ./MakeYourFirstCall.md
+```
+

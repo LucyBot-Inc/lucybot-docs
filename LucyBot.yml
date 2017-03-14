@@ -28,7 +28,6 @@ navigation:
           - markdownFile: ./markdown/navigation/Links.md
           - markdownFile: ./markdown/navigation/OpenAPI.md
   - markdownFile: ./markdown/BuildingTheSite.md
-    expand: true
     children:
       - markdownFile: ./markdown/DevelopmentMode.md
       - markdownFile: ./markdown/Travis.md
@@ -38,7 +37,6 @@ navigation:
       feel of your documentation. You can use Bootstrap themes
       to specify your brand's preferred colors and fonts, and include
       HTML templates to customize the navbar, footer, and loading screen.
-    expand: true
     children:
       - markdownFile: ./markdown/Bootstrap.md
       - markdownFile: ./markdown/Templates.md

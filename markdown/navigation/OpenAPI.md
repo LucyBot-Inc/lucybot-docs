@@ -15,7 +15,7 @@ routes:
       - operation: "addWidget"    // or operationId
 
       - tag: users // References the 'users' tag in the OpenAPI spec.
-                   // The item's children will be all the operations with this tag.
+                   // The children of this item will be all the operations with this tag.
 
       - definition: User   // References 'definitions' field in the OpenAPI spec.
 

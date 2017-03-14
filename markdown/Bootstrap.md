@@ -1,4 +1,4 @@
-## Create a Custom Bootstrap Theme
+## Bootstrap Theme
 
 Bootstrap offers a [large set of variables](http://getbootstrap.com/customize/)
 to control fonts, sizing, colors, and more. You can check out a sample

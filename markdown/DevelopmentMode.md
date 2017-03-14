@@ -1,4 +1,5 @@
 ## Development Mode
+> The LucyBot server should **not** be used in production
 
 Rebuilding your site each time you make a change can slow down
 the development cycle, so LucyBot provides a development server
