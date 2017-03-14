@@ -33,5 +33,6 @@ touch acme_docs/LucyBot.yml
 ```
 
 ### Examples
-* [LucyBot docs](https://github.com/lucybot/lucybot-docs) - The repository that drives the documentation seen here
+* [LucyBot docs](https://github.com/LucyBot-Inc/lucybot-docs) - The repository that drives the documentation seen here
 * [Kaltura Developer Platform](https://github.com/kaltura/developer-platform) - For Kaltura's VPaaS documentation
+* [AnyAPI](https://github.com/LucyBot-Inc/AnyAPI) - Documentation for 300+ APIs
