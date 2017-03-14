@@ -1,6 +1,6 @@
 ## Gallery
 
-The gallery page is used primarily to showcase multiple APIs or
+The gallery UI can be used to showcase multiple APIs or
 workflows. It displays each item in a separate panel. Each panel
 can have a title, icon, summary, and tags.
 

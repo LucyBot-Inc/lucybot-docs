@@ -7,7 +7,7 @@ Learn more about LucyBot's tools at [lucybot.com](http://lucybot.com).
 ### Getting Started
 You can try the starter version of LucyBot [on GitHub](https://github.com/LucyBot-Inc/documentation-starter).
 
-The rest of this documentation applies only to the full version - visit
+**The rest of this documentation applies only to the full version** - visit
 [lucybot.com](http://lucybot.com) for access.
 
 ### Installation
