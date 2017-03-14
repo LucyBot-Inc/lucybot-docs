@@ -1,11 +1,11 @@
 ## API Specifications
 You can generate documentation for APIs described in OpenAPI, RAML,
-API Blueprint, WADL, or I/O Docs.
+API Blueprint, WADL, or I/O Docs. You can specify both local files and URLs.
 
 ```yaml
 specifications:
   acme_api:
-    - openapi: ./openapi.yml
+    - openapi: https://api.example.com/openapi.yml
   bugs_api:
     - api_blueprint: ./apibp.md
   daffy_api:

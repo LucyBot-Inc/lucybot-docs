@@ -1,4 +1,4 @@
-# OpenAPI Extensions for LucyBot
+## OpenAPI Extensions
 
 We utilize a few extra OpenAPI fields to help describe your documentation.
 

@@ -5,19 +5,12 @@ the development cycle, so LucyBot provides a development server
 that auto-reloads your changes.
 
 ```bash
-git clone https://$YOUR_ACCESS_TOKEN@github.com/LucyBot-Inc/documentation-generator lucybot
-cd lucybot
-npm install
-
-./build/build.js --directory /path/to/dir/containing/LucyBot.yml/ --destination static/ --nocleanup
-node dev-server.js &
+lucybot serve --port 3000
 
 # Server is now listening on port 3000
-# Make your changes...
-
-./build/build.js --nowebpack --directory /path/to/dir/containing/LucyBot.yml/ --destination static/ --nocleanup
-
-# Changes are now visible at localhost:3000.
+# Any file changes will be automatically reloaded
 ```
 
-Note that for changes to HTML templates (navbar, footer, and loading screen) you'll need to restart the dev-server.
+Note that for changes to HTML templates (navbar, footer, and loading screen)
+you'll need to restart the server.
+
