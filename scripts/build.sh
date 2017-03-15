@@ -1,1 +1,1 @@
-lucybot build --destination docs/ --noredirect
+lucybot build --destination docs/
