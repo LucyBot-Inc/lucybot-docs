@@ -39,7 +39,8 @@ The following fields are available in LucyBot.yml:
 * `sitemap` - Options for generating sitemap.xml
   * `sitemap.hostname`
 * `favicon` - URL for `<link rel="icon">`
-* `hljsTheme` (default `github`) - A theme name for [highlightjs](https://highlightjs.org/static/demo/)
+* `prismjsTheme` - A theme name for the [PrismJS](https://github.com/PrismJS/prism/tree/gh-pages/themes)
+syntax highlighter (one of `coy`, `dark`, `funky`, `okaidia`, `solarizedlight`, `tomorrow`, or `twilight`)
 * `github` - Options for GitHub authentication (to enable community edits)
   * `github.repo` - The name of the repository LucyBot.yml is in
   * `github.redirect_uri`

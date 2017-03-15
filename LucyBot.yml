@@ -1,4 +1,4 @@
-hljsTheme: 'atom-one-dark'
+prismjsTheme: 'okaidia'
 routes:
   '/':
     navigation: navigation

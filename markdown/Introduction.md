@@ -18,7 +18,7 @@ You can try the starter version of LucyBot [on GitHub](https://github.com/LucyBo
 Upon purchase, you'll be given an access key that allows you to install the latest
 version of LucyBot:
 
-```
+```bash
 npm install -g https://$YOUR_ACCESS_KEY@github.com/LucyBot-Inc/documentation-generator
 lucybot --version
 ```
@@ -27,7 +27,7 @@ lucybot --version
 Create a new directory to hold your LucyBot configuration and any API specifications,
 Markdown files, HTML assets, etc:
 
-```
+```bash
 mkdir acme_docs
 touch acme_docs/LucyBot.yml
 ```

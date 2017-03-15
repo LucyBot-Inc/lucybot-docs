@@ -34,11 +34,11 @@ routes:
     ui: documentation
     for: acme_api
 
-  /console
+  /console:
     ui: console
     for: acme_api
 
-  /terms
+  /terms:
     ui: markdown
     markdownFile: ./html/TermsOfService.html
 
