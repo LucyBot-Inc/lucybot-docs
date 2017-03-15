@@ -30,7 +30,7 @@ lucybot build --destination /var/www/html/
 ```
 
 ### Amazon S3
-```
+```bash
 lucybot build
 s3 sync ./www s3://mybucket
 ```

@@ -1,4 +1,4 @@
-hljsTheme: 'atom-one-light'
+hljsTheme: 'atom-one-dark'
 routes:
   '/':
     navigation: navigation
