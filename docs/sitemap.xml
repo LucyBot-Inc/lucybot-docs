@@ -17,6 +17,7 @@
 <url> <loc>http://docs.lucybot.com/Building_the_Website</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
 <url> <loc>http://docs.lucybot.com/Building_the_Website/Development_Mode</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
 <url> <loc>http://docs.lucybot.com/Building_the_Website/Travis_Integration</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
+<url> <loc>http://docs.lucybot.com/Hosting_the_Website</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
 <url> <loc>http://docs.lucybot.com/Branding_and_Customization</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
 <url> <loc>http://docs.lucybot.com/Branding_and_Customization/Bootstrap_Theme</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
 <url> <loc>http://docs.lucybot.com/Branding_and_Customization/Navbar_and_Footer</loc> <changefreq>daily</changefreq> <priority>0.2</priority> </url>
