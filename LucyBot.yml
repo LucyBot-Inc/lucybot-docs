@@ -31,6 +31,7 @@ navigation:
     children:
       - markdownFile: ./markdown/DevelopmentMode.md
       - markdownFile: ./markdown/Travis.md
+  - markdownFile: ./markdown/Hosting.md
   - title: Branding and Customization
     markdown: |
       LucyBot offers several options for customizing the look and
