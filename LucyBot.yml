@@ -2,6 +2,7 @@ prismjsTheme: 'okaidia'
 routes:
   '/':
     navigation: navigation
+    title: Documentation Generator
     meta:
       title: LucyBot Documentation
 

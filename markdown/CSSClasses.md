@@ -10,11 +10,36 @@ The easiest way to do this is to use your browser's console to inspect page elem
 
 > Want to customize something that isn't listed here? [Let us know!](http://lucybot.com/#Contact)
 
+#### UIs
+If you want to specify a style that only applies to a certain UI,
+you can use classes applied to the `<body>` tag:
+```
+body.ui-documentation {
+  background-color: blue;
+}
+body.ui-console {
+  background-color: red;
+}
+body.ui-markdown {
+  background-color: green;
+}
+```
+
 #### Breadcrumbs
 The title at the top of every page has the `.breadcrumbs` class:
 ```css
 .breadcrumbs {
   font-size: 42px;
+}
+```
+
+For example, you can hide the first part of the title on mobile:
+```css
+@media (min-width: 768px) {
+  .breadcrumbs span:first-child,
+  .breadcrumbs .fa-chevron-right {
+    display: none;
+  }
 }
 ```
 
@@ -26,20 +51,12 @@ The left-hand navigation has the `.side-menu` class:
 }
 ```
 
-#### Markdown Body
+#### Markdown Content
 Markdown content in the documentation UI can be selected with
-the `.docs-body` class:
+the `.docs-contents` class:
 ```css
-.docs-body pre {
+.docs-contents pre {
   border: 1px solid #ccc;
-}
-.docs-body h1,
-.docs-body h2,
-.docs-body h3,
-.docs-body h4,
-.docs-body h5,
-.docs-body h6 {
-  margin-top: 30px;
 }
 ```
 

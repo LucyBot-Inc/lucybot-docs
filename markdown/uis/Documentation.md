@@ -17,6 +17,7 @@ routes:
   /api-docs:
     ui: documentation
     for: acme_api
+    title: ACME API Docs
     navigation:
       - markdownFile: ./Introduction.md
       - markdownFile: ./GetAnAPIKey.md
