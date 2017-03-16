@@ -12,12 +12,21 @@ routes:
       - markdownFile: ./Introduction.md
 
       - operation: "GET /widget"  // Use method and path
-      - operation: "addWidget"    // or operationId
+      - operation: "addWidget"    //   or operationId.
+
+      - title: "All Operations"
+        operations: true
+
+      - title: "Widget Operations"
+        operations: "/widgets"  // Children will be GET, POST, DELETE, etc.
 
       - tag: users // References the 'users' tag in the OpenAPI spec.
-                   // The children of this item will be all the operations with this tag.
+                   // Children will be all the operations with this tag.
 
       - definition: User   // References 'definitions' field in the OpenAPI spec.
+
+      - title: "All Definitions"
+        definitions: true
 
 specifications:
   acme_api:

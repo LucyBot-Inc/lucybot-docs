@@ -9,8 +9,6 @@ favicon: assets/favicon.ico
 sitemap:
   hostname: http://docs.lucybot.com
 
-oauth: true
-
 navigation:
   - markdownFile: ./markdown/Introduction.md
   - markdownFile: ./markdown/LucyBotYml.md

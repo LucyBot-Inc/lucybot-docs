@@ -10,7 +10,7 @@ If tags are specified, a left-hand menu will be show allowing users to
 filter results by tag.
 
 #### Example
-```
+```yaml
 routes:
   /:
     ui: gallery

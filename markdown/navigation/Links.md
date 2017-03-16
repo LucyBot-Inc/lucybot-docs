@@ -1,6 +1,6 @@
 ## Creating Links
 You may want to include links to other pages in your Markdown. The URL for each page
-can be found by replacing any special characters (matching `/\W+/`) with underscores.
+can be found by replacing any special characters in the title (matching `/\W+/`) with underscores.
 For example, "ACME foo & bar" would become "ACME_foo_bar".
 
 To create a link relative to your server root, prefix the link with `/`. Otherwise

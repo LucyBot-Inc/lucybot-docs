@@ -26,6 +26,23 @@ The left-hand navigation has the `.side-menu` class:
 }
 ```
 
+#### Markdown Body
+Markdown content in the documentation UI can be selected with
+the `.docs-body` class:
+```css
+.docs-body pre {
+  border: 1px solid #ccc;
+}
+.docs-body h1,
+.docs-body h2,
+.docs-body h3,
+.docs-body h4,
+.docs-body h5,
+.docs-body h6 {
+  margin-top: 30px;
+}
+```
+
 #### HTTP method colors
 HTTP operation titles will have GET/POST/DELETE with an
 appropriate background color. You can change these by selecting
@@ -47,7 +64,7 @@ To achieve this, add the class `navbar-fixed-top` to your `<nav>` in `navbar.htm
 You'll also need to add padding to the body
 [per the Bootstrap docs](http://getbootstrap.com/components/#navbar-fixed-top):
 
-```
+```css
 body {
   padding-top: 70px; /* adjust based on the size of your navbar */
 }

@@ -25,26 +25,11 @@ This will create pages at:
 /docs (redirects to /docs/Introduction)
 ```
 
-### Page Content
-You can control the content shown when the navigation item is clicked by specifying
-**one** of the following fields:
-
-* `markdown` - This is treated as a raw markdown/HTML string, like in the
-"Introduction" section above.
-* `markdownFile` - This is markdown read from a file somewhere in your repository
-* `operation` - An API operation
-* `definition` - An API schema (in JSON Schema)
-* `tag` - An API tag
-
-See [OpenAPI](Navigation/OpenAPI) for more info on `operation`, `definition`, and `tag`.
-
-Note that markdown is unsanitized, so you can include HTML, as well as any `<script>`
-or `<style>` tags.
-
 ### Options
 
 The following fields are available on each navigation item:
 * `title` - The title of the item
+* `autoselect` - Automatically redirect to the first child of this item
 * `hide` - Hide the item from being shown in the UI
 * `expand` - Always show this item's children
 * `meta` - Controls `<meta>` and `<title>` tags
