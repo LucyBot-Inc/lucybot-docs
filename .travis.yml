@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+      - "6"
+before_install:
+  - "npm install -g https://$LUCYBOT_ACCESS_TOKEN@github.com/LucyBot-Inc/documentation-generator"
+script:
+  - ./scripts/build.sh
+notifications:
+ email:
+    recipients:
+      - bobby@lucybot.com
+    on_success: change
+    on_failure: always
+
