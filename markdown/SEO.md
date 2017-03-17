@@ -8,7 +8,7 @@ If you don't manually set these tags, LucyBot will use your API specification
 and markdown to auto-generate them.
 
 ### Top-level pages
-Each page specified in the `routes` section of `LucyBot.yml` can have it's own
+Each page specified in the `routes` section of `LucyBot.yml` can have its own
 meta tags:
 
 ```yaml
