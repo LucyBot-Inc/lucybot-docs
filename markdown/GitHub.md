@@ -5,7 +5,7 @@ You can integrate your documentation with GitHub to allow
 teammates and users to suggest edits to your docs. Currently
 this only works for adding and contributing workflows.
 
-You'll need to register a GitHub appliation at [github.com/settings](http://github.com/settings),
+You'll need to register a GitHub application at [github.com/settings](http://github.com/settings),
 and add your credentials to LucyBot.yml:
 
 ```yaml

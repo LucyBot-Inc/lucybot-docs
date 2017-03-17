@@ -33,7 +33,7 @@ lucybot build --prerender --destination ../api_docs_generated
 cd ../api_docs_generated
 git config --global user.name "Travis CI"
 git config --global user.email "me@acme.com"
-echo "Commiting build"
+echo "Committing build"
 git add .
 git commit -a -m "Build API docs [skip ci]"
 git push -q -u https://$PERSONAL_ACCESS_TOKEN@github.com/ACME/api_docs_generated HEAD:master >> /dev/null 2>&1
