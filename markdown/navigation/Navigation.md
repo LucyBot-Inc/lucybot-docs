@@ -39,7 +39,7 @@ The following fields are available on each navigation item:
 
 ### Reusing Navigation Menus
 If you want to reuse
-a navigation menu for multiple routes, you can reference it by it's field name:
+a navigation menu for multiple routes, you can reference it by its field name:
 
 ```yaml
 routes:
