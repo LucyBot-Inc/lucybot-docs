@@ -10,16 +10,23 @@ discussionURL: https://forums.example.com?q={{title}}
 ```
 
 Note that occurrences of `{{title}}` in the the URL will be replaced
-with the page title.
+with the page title. `{{slug}}` will do the same, with spaces and
+special characters replaced by an underscore.
 
-You can also set `discussionURL` for individual navigation items:
+You can also set a specific `discussionURL` for individual navigation items,
+or set it to null to disable the discussion frame.
 
 ```yaml
+discussionURL: https://forums.example.com/thread/{{slug}}
+
 routes:
   /:
     ui: documentation
     navigation:
       - markdownFile: ./Introduction.md
+        discussionURL: null
       - markdownFile: ./GetAnAPIKey.md
         discussionURL: https://forums.example.com/thread/get-an-api-key
+      - title: Start a Session
+        // discussionURL will be https://forums.example.com/thread/Start_a_Session
 ```
