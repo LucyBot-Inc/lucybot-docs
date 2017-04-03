@@ -41,12 +41,15 @@ The following fields are available in LucyBot.yml:
 * `favicon` - URL for `<link rel="icon">`
 * `prismjsTheme` - A theme name for the [PrismJS](https://github.com/PrismJS/prism/tree/gh-pages/themes)
 syntax highlighter (one of `coy`, `dark`, `funky`, `okaidia`, `solarizedlight`, `tomorrow`, or `twilight`)
+* `basePath` - If the generated LucyBot site is not mounted on your server's root, you'll need to set this or `useHash`
+* `useHash` (default `false`) - Use hashes instead of paths for navigation (`example.com/#/foo` instead of `example.com/foo`)
+* `uiOptions`
+  * `uiOptions.embedConsoleInDocumentation` - The 'Try It' link will expand an embedded console instead of navigating to a new page
+  * `uiOptions.discussionTitle` - The title to show above the discussion iframe
 * `github` - Options for GitHub authentication (to enable community edits)
   * `github.repo` - The name of the repository LucyBot.yml is in
   * `github.redirect_uri`
   * `github.client_id`
-* `useHash` (default `false`) - Use hashes instead of paths for navigation (`example.com/#/foo` instead of `example.com/foo`)
-* `basePath` - If the generated LucyBot site is not mounted on your server's root, you'll need to set this
 * `loadOpenAPISynchronous` - A performance improvement if you're using the `--prerender` option
 
 ### LucyBot.js
