@@ -34,7 +34,8 @@ You can control the content shown when a navigation item is clicked by specifyin
 
 * `markdown` - This is treated as a raw markdown/HTML string, like in the
 "Introduction" section above.
-* `markdownFile` - This is markdown read from a file somewhere in your repository
+* `markdownFile` - This is markdown (or HTML) read from a file somewhere in your repository
+* `markdownURL` - This is a markdown (or HTML) served from a URL
 * `operation` - An API operation (with parameters and responses)
 * `definition` - An API schema (in JSON Schema)
 * `tag` - An API tag
