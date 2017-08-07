@@ -29,6 +29,7 @@ This will create pages at:
 
 The following fields are available on each navigation item:
 * `title` - The title of the item
+* `path` - The URL used for this navigation item, relative to the route
 * `autoselect` - Automatically redirect to the first child of this item
 * `hide` - Hide the item from being shown in the UI
 * `expand` - Always show this item's children
