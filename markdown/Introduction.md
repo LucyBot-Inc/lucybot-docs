@@ -19,7 +19,7 @@ Upon purchase, you'll be given an access key that allows you to install the late
 version of LucyBot:
 
 ```bash
-npm install -g https://$YOUR_ACCESS_KEY@github.com/LucyBot-Inc/documentation-generator#v3.12.1
+npm install -g https://$YOUR_ACCESS_KEY@github.com/LucyBot-Inc/documentation-generator#v3.16.0
 lucybot --version
 ```
 
