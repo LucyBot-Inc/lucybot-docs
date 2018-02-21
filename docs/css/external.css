@@ -1,0 +1,10 @@
+.navbar-brand {
+  padding: 20px 15px;
+}
+.navbar-brand img {
+  height: 100%;
+}
+.docs-contents ul > li {
+  margin-bottom: 5px;
+}
+
