@@ -18,6 +18,9 @@ routes:
     meta:
       title: "ACME API Documentation"
       description: "Documentation for using the ACME API"
+      keywords:
+        - ACME API
+        - ACME Documentation
 ```
 
 Search engines will then *usually* show the following in search results:
