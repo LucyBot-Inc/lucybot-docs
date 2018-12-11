@@ -49,7 +49,7 @@ routes:
     ui: documentation
     for: acme_api
     navigation: acme_navigation
-  /console
+  /console:
     ui: console
     for: acme_api
     navigation: acme_navigation
