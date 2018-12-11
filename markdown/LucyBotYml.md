@@ -49,6 +49,7 @@ syntax highlighter (one of `coy`, `dark`, `funky`, `okaidia`, `solarizedlight`, 
   * `uiOptions.optionalizeHost` - Set to true to allow users to set an alternative host, e.g. `localhost:3000`
   * `uiOptions.messages` - Language for error messages etc.
     * `uiOptions.messages.deprecated` - Message to show for operations marked `deprecated` (default: 'This operation has been deprecated.')
+* `workflowDirectory` - directory containing workflow markdown
 * `github` - Options for GitHub authentication (to enable community edits)
   * `github.repo` - The name of the repository LucyBot.yml is in
   * `github.redirect_uri`
