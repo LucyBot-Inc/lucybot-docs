@@ -116,9 +116,13 @@ var AppComponent = /** @class */ (function () {
         this.platformService = platformService;
         this.subscriptions = [];
         window.app = this;
+        var isFirst = true;
         this.subscriptions.push(this.router.events.subscribe(function (event) {
             if (_this.platformService.isBrowser && event instanceof __WEBPACK_IMPORTED_MODULE_1__angular_router__["NavigationEnd"] && window.innerWidth > MAX_XS_WIDTH) {
-                window.scrollTo(0, 0);
+                if (!isFirst) {
+                    window.scrollTo(0, 0);
+                }
+                isFirst = false;
             }
         }));
     }
@@ -1523,19 +1527,18 @@ var DocumentationComponent = /** @class */ (function () {
         this.error = null;
         this.showResults = false;
         this.activeItem = item;
+        var stateKey = Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["makeStateKey"])(item.markdownURL || '');
         if (item.contents) {
             this.setActiveItemHTML(item.contents, !item.isHTML);
         }
         else if (item.markdownURL) {
-            var stateKey_1 = Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["makeStateKey"])(item.markdownURL);
             item.isHTML = !!item.markdownURL.match(/\.html$/);
-            item.contents = this.state.get(stateKey_1, null);
+            item.contents = this.state.get(stateKey, null);
             if (!item.contents) {
                 this.http.get(this.originUrl + item.markdownURL, { responseType: 'text' })
                     .toPromise()
                     .then(function (md) {
                     item.contents = md;
-                    _this.state.set(stateKey_1, item.contents);
                     _this.setActiveItemHTML(item.contents, !item.isHTML);
                 })
                     .catch(function (e) {
@@ -1545,6 +1548,9 @@ var DocumentationComponent = /** @class */ (function () {
             else {
                 this.setActiveItemHTML(item.contents, !item.isHTML);
             }
+        }
+        if (this.platformService.isServer) {
+            this.state.set(stateKey, item.contents);
         }
         if (this.platformService.isBrowser) {
             setTimeout(function () {
@@ -2656,11 +2662,11 @@ var ParameterComponent = /** @class */ (function () {
                 }
             }));
         }
-        if (this.parameter.in === 'body' && this.parameter.consumes.indexOf('application/json') !== -1) {
+        if (this.parameter.in === 'body' && (this.parameter.consumes || []).indexOf('application/json') !== -1) {
             var startval = this.model[this.parameter.name];
             this.setContentType('application/json');
         }
-        else if (this.parameter.in === 'body') {
+        else if (this.parameter.in === 'body' && this.parameter.consumes) {
             this.setContentType(this.parameter.consumes[0]);
         }
     };
@@ -4798,6 +4804,7 @@ var LOCAL_STORAGE_KEY = 'github_token';
 var BASE_URL = 'https://api.github.com';
 var REDIRECT_URI = window.config.github.redirect_uri;
 var GITHUB_CLIENT_ID = window.config.github.client_id;
+var WORKFLOW_DIRECTORY = window.config.workflowDirectory || 'workflows';
 var GitHubService = /** @class */ (function () {
     function GitHubService(http, zone, tracker, platformService, secrets) {
         this.http = http;
@@ -4816,25 +4823,26 @@ var GitHubService = /** @class */ (function () {
         this.setPullRequests();
         this.checkAuth();
     }
-    GitHubService.prototype.get = function (url, params) {
+    GitHubService.prototype.buildSearch = function (params) {
         if (params === void 0) { params = {}; }
         var search = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["HttpParams"]();
         for (var k in params)
-            search.set(k, params[k]);
-        if (this.access_token)
-            search.set('access_token', this.access_token);
-        return this.setUpRequest(this.http.get(BASE_URL + url, { params: search }));
+            search = search.set(k, params[k]);
+        if (this.access_token) {
+            search = search.set('access_token', this.access_token);
+        }
+        return search;
+    };
+    GitHubService.prototype.get = function (url, params) {
+        if (params === void 0) { params = {}; }
+        return this.setUpRequest(this.http.get(BASE_URL + url, { params: this.buildSearch(params) }));
     };
     GitHubService.prototype.putOrPost = function (method, url, body, query) {
         if (body === void 0) { body = {}; }
         if (query === void 0) { query = {}; }
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["HttpHeaders"]({ 'Content-Type': 'application/json' });
-        var search = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["HttpParams"]();
-        for (var k in query)
-            search.set(k, query[k]);
-        if (this.access_token)
-            search.set('access_token', this.access_token);
-        return this.setUpRequest(this.http[method](BASE_URL + url, JSON.stringify(body), { headers: headers, params: search }));
+        var params = this.buildSearch(query);
+        return this.setUpRequest(this.http[method](BASE_URL + url, JSON.stringify(body), { headers: headers, params: params }));
     };
     GitHubService.prototype.post = function (url, body, query) {
         if (body === void 0) { body = {}; }
@@ -4910,7 +4918,7 @@ var GitHubService = /** @class */ (function () {
         var _this = this;
         this.get('/repos/' + forkName)
             .then(function (repo) {
-            return _this.get('/repos/' + forkName + '/contents/workflows');
+            return _this.get('/repos/' + forkName + '/contents/' + WORKFLOW_DIRECTORY);
         })
             .then(function (contents) {
             _this.forkWorkflows = contents.map(function (c) { return c.name; });
@@ -4922,7 +4930,7 @@ var GitHubService = /** @class */ (function () {
             .then(function (pulls) { return _this.pullRequests = pulls.filter(function (p) { return p.head.repo; }); });
     };
     GitHubService.prototype.getWorkflowPreviewURL = function (forkName, workflowName) {
-        return "https://raw.githubusercontent.com/" + forkName + "/master/workflows/" + workflowName + "/readme.md";
+        return "https://raw.githubusercontent.com/" + forkName + "/master/" + WORKFLOW_DIRECTORY + "/" + workflowName + "/readme.md";
     };
     GitHubService.prototype.handleError = function (error) {
         var errMsg = (error.message) ? error.message :
@@ -5057,6 +5065,7 @@ var MenuService = /** @class */ (function () {
         if (needsInit) {
             this.clearNavigation();
             this.items = initializeNavigation(nav, window.config, this.openapi.parsed) || [];
+            this.routes.setCurrentNavigation(this.items);
             this.search.setItems(this.items);
             this.setTags();
         }
@@ -5808,7 +5817,7 @@ var OpenAPIService = /** @class */ (function () {
                 continue;
             if (subschema.$ref)
                 subschema = this.resolveReference(subschema.$ref);
-            smaller.properties[key] = Object.assign({}, subschema, smaller.properties[key], { $ref: undefined });
+            smaller.properties[key] = Object.assign({}, subschema, smaller.properties[key], { $ref: undefined, allOf: undefined, anyOf: undefined, oneOf: undefined });
             this.fillSchema(smaller.properties[key], subschema);
         }
     };
@@ -5989,6 +5998,9 @@ var RoutesService = /** @class */ (function () {
             nav = window.config[nav];
         return nav;
     };
+    RoutesService.prototype.setCurrentNavigation = function (nav) {
+        this.getCurrentRoute().navigation = nav;
+    };
     RoutesService.prototype.getPathParts = function (path) {
         if (path === void 0) { path = ''; }
         if (path.charAt(0) === '/')
@@ -6013,7 +6025,8 @@ var RoutesService = /** @class */ (function () {
     };
     RoutesService.prototype.getAPICallLink = function (apiCall, docsOrConsole) {
         var link = this.getLink(docsOrConsole);
-        var route = window.config.routes[link[0]];
+        var base = this.getBasePath(link);
+        var route = window.config.routes[base];
         if (typeof route.navigation === 'string') {
             route.navigation = window.config[route.navigation];
         }
@@ -6031,7 +6044,7 @@ var RoutesService = /** @class */ (function () {
         }
         var sublink = getLink(route.navigation);
         if (!sublink)
-            throw new Error("nav not found for " + apiCall);
+            throw new Error("nav not found for " + apiCall.method + ' ' + apiCall.path);
         return link.concat(sublink.path.substring(1).split('/'));
     };
     RoutesService.prototype.getNavigationLink = function (path) {
@@ -6942,7 +6955,12 @@ var apiCallTemplate = function apiCallTemplate(apiCall) {
 };
 
 var LANG_HIGHLIGHT_NAMES = {
-  'node': 'javascript'
+  'node': 'javascript',
+  'php53': 'php',
+  'angular': 'typescript',
+  'python': 'py',
+  'ajax': 'javascript',
+  'curl': 'bash'
 };
 
 var codeSnippetTemplate = function codeSnippetTemplate(snippets) {
