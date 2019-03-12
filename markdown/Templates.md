@@ -65,3 +65,12 @@ Here's the default loading template:
   <h1><i class="fa fa-spin fa-refresh"></i><h1>
 </div>
 ```
+
+### Head
+HTML can be inserted in the `<head>` tag using `templates/head.html`.
+
+For example,
+
+```html
+<meta name="google-site-verification" content="trqp2yeNzIbyb85BRQKWnvaHL2ERDn5kM8rBnJTvV2s" />
+```
